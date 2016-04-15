@@ -1,0 +1,46 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"  xmlns:drawer="nativescript-telerik-ui/sidedrawer" loaded='loaded'>
+
+ 
+<drawer:RadSideDrawer id="mySideDrawer"
+                      drawerClosed="onDrawerClosed"
+                      drawerClosing="onDrawerClosing"
+                      drawerOpened="onDrawerOpened"
+                      drawerOpening="onDrawerOpening">
+    <drawer:RadSideDrawer.mainContent>
+      <StackLayout >
+          <TabView selectedIndex="{{tabIndex}}">
+            <TabView.items>
+                <TabViewItem title="Tab 1">
+                <TabViewItem.view>
+                <Label text="Label in Tab1" />
+                </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem title="Tab 2">
+                <TabViewItem.view>
+                    <Label text="Label in Tab2" />
+                </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem title="Tab 3">
+                <TabViewItem.view>
+                    <Label text="Label in Tab3" />
+                </TabViewItem.view>
+                </TabViewItem>
+            </TabView.items>
+            </TabView> 
+      </StackLayout>
+    </drawer:RadSideDrawer.mainContent>
+    <drawer:RadSideDrawer.drawerContent>
+      <StackLayout cssClass="drawerContent">
+        <StackLayout cssClass="headerContent">
+          <Label text="Header"/>
+        </StackLayout>
+        <StackLayout cssClass="drawerMenuContent">
+          <Label text="Item 1"/>
+          <Label text="Item 2"/>
+          <Label text="Item 3"/>
+          <Label text="Item 4"/>
+        </StackLayout>
+      </StackLayout>
+    </drawer:RadSideDrawer.drawerContent>
+  </drawer:RadSideDrawer>
+</Page>

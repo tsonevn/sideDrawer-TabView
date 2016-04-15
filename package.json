@@ -1,0 +1,19 @@
+{
+	"nativescript": {
+		"id": "org.nativescript.sidedrawerTapItem",
+		"tns-android": {
+			"version": "1.7.1"
+		},
+		"tns-ios": {
+			"version": "1.7.0"
+		}
+	},
+	"dependencies": {
+		"nativescript-telerik-ui": "^1.0.1",
+		"tns-core-modules": "1.7.1"
+	},
+	"devDependencies": {
+		"nativescript-dev-typescript": "^0.3.0",
+		"typescript": "^1.8.10"
+	}
+}
