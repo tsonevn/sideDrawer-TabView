@@ -19,25 +19,8 @@
            </drawer:RadSideDrawer.drawerContent>
            <drawer:RadSideDrawer.mainContent>
                 <GridLayout >
-                    <TabView selectedIndex="0">
-                      <TabView.items>
-                          <TabViewItem title="Tab 1">
-                          <TabViewItem.view>
-                          <Label text="Label in Tab1" />
-                          </TabViewItem.view>
-                          </TabViewItem>
-                          <TabViewItem title="Tab 2">
-                          <TabViewItem.view>
-                              <Label text="Label in Tab2" />
-                          </TabViewItem.view>
-                          </TabViewItem>
-                          <TabViewItem title="Tab 3">
-                          <TabViewItem.view>
-                              <Label text="Label in Tab3" />
-                          </TabViewItem.view>
-                          </TabViewItem>
-                      </TabView.items>
-                      </TabView> 
+                   <Label text="page2" textWrap="true" />
+                   
                 </GridLayout>
            </drawer:RadSideDrawer.mainContent>
         </drawer:RadSideDrawer>

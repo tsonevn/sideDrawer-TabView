@@ -11,4 +11,4 @@ function onTap(args) {
     frame_1.topmost().navigate(tmppage);
 }
 exports.onTap = onTap;
-//# sourceMappingURL=main-page.js.map
+//# sourceMappingURL=page3.js.map
