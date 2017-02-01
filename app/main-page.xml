@@ -1,21 +1,12 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"  
     xmlns:dpg="nativescript-telerik-ui/sidedrawer/drawerpage"
-    xmlns:drawer="nativescript-telerik-ui/sidedrawer" loaded='loaded'>
+    xmlns:drawer="nativescript-telerik-ui/sidedrawer" loaded='loaded' xmlns:drcontent="customComponent">
 
  
 <dpg:DrawerPage.sideDrawer>
         <drawer:RadSideDrawer id="sideDrawer">
           <drawer:RadSideDrawer.drawerContent>
-              <StackLayout cssClass="drawerContent">
-                  <StackLayout cssClass="headerContent">
-                    <Label text="Header"/>
-                  </StackLayout>
-                  <StackLayout cssClass="drawerMenuContent">
-                    <Label text="Page 1" id="main-page" tap="onTap"/>
-                    <Label text="Page 2" id="pages/page2" tap="onTap"/>
-                    <Label text="Page 3" id="pages/page3" tap="onTap"/>
-                  </StackLayout>
-                </StackLayout>
+                <drcontent:drawercontent />
            </drawer:RadSideDrawer.drawerContent>
            <drawer:RadSideDrawer.mainContent>
                 <GridLayout >
@@ -23,7 +14,18 @@
                       <TabView.items>
                           <TabViewItem title="Tab 1">
                           <TabViewItem.view>
-                          <Label text="Label in Tab1" />
+                          <GridLayout>
+                            <!--<Label text="custom component" textWrap="true" />-->
+                            
+                                <ListView items="{{notificationList}}">
+                                <ListView.itemTemplate>
+                                    <stack-layout>
+                                    <label text="{{title}}" horizontalAlignment="left" verticalAlignment="center" />
+                                    <label text="{{body}}" horizontalAlignment="left" verticalAlignment="center" />
+                                    </stack-layout>
+                                </ListView.itemTemplate>
+                                </ListView>
+                            </GridLayout>
                           </TabViewItem.view>
                           </TabViewItem>
                           <TabViewItem title="Tab 2">
